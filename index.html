@@ -3,400 +3,252 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Cuarta Dimensión | Grupo de Recuperación</title>
-  <meta name="description" content="Sitio informativo de La Cuarta Dimensión, grupo de recuperación basado en los principios de los Doce Pasos." />
+
+  <title>Sexólicos Anónimos en Satélite | La Cuarta Dimensión</title>
+
+  <meta name="description"
+    content="Grupo de Sexólicos Anónimos en Ciudad Satélite, Naucalpan. Recuperación de la adicción sexual, pornografía y conducta compulsiva. Reuniones presenciales y apoyo confidencial." />
+
+  <meta name="keywords"
+    content="Sexólicos Anónimos, SA, pornografía, adicción sexual, Satélite, Naucalpan, Estado de México, recuperación" />
+
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title"
+    content="La Cuarta Dimensión | Sexólicos Anónimos en Satélite" />
+
+  <meta property="og:description"
+    content="Grupo de recuperación para adicción sexual y pornografía en Ciudad Satélite." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lacuartadimension.org" />
+  <meta property="og:image" content="https://lacuartadimension.org/logo.png" />
+
+  <link rel="icon" type="image/png" href="logo.png" />
+
   <style>
     :root {
-      --bg: #f7f4ed;
-      --paper: #ffffff;
-      --ink: #1f2933;
-      --muted: #5f6c7b;
-      --accent: #2f5d62;
-      --accent-soft: #dce8e6;
-      --gold: #b38b2e;
-      --border: #e5e0d6;
+      --azul-profundo: #071d3a;
+      --azul-medio: #2f66a3;
+      --gris-texto: #333333;
+      --gris-suave: #f5f7fa;
+      --borde: #dddddd;
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
-      font-family: Georgia, "Times New Roman", serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.65;
+      font-family: Arial, sans-serif;
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: var(--gris-texto);
+      background: #ffffff;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 34px;
+      padding-top: 10px;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .logo {
+      width: 260px;
+      max-width: 85%;
+      height: auto;
+    }
+
+    h1 {
+      color: var(--azul-profundo);
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: var(--azul-profundo);
+      margin-top: 0;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--azul-medio);
+      margin-bottom: 8px;
+    }
+
+    .quote {
+      color: #555555;
+      font-style: italic;
+      margin-top: 6px;
+    }
+
+    .card {
+      border: 1px solid var(--borde);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 22px;
+      background: #ffffff;
+    }
+
+    .card.highlight {
+      background: var(--gris-suave);
     }
 
     a {
-      color: var(--accent);
+      color: var(--azul-medio);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    header {
-      background: linear-gradient(135deg, #203a43, #2f5d62);
-      color: white;
-      padding: 72px 20px 56px;
-      text-align: center;
-    }
-
-    header .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 0.82rem;
-      opacity: 0.85;
-      margin-bottom: 12px;
-      font-family: Arial, sans-serif;
-    }
-
-    header h1 {
-      font-size: clamp(2.4rem, 6vw, 4.8rem);
-      line-height: 1.05;
-      margin-bottom: 18px;
-      font-weight: 500;
-    }
-
-    header p {
-      max-width: 760px;
-      margin: 0 auto 28px;
-      font-size: 1.18rem;
-      opacity: 0.95;
-    }
-
-    .cta-row {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 999px;
-      font-family: Arial, sans-serif;
-      font-size: 0.95rem;
-      border: 1px solid rgba(255,255,255,0.65);
-      color: white;
-      transition: 0.2s ease;
-    }
-
-    .button.primary {
-      background: white;
-      color: var(--accent);
-      border-color: white;
-    }
-
-    .button:hover {
-      transform: translateY(-1px);
-      text-decoration: none;
-    }
-
-    nav {
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(8px);
-    }
-
-    nav .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      gap: 26px;
-      padding: 14px 20px;
-      flex-wrap: wrap;
-      font-family: Arial, sans-serif;
-      font-size: 0.92rem;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 48px 20px 80px;
-    }
-
-    section {
-      margin-bottom: 42px;
-    }
-
-    .card {
-      background: var(--paper);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 32px;
-      box-shadow: 0 18px 40px rgba(31, 41, 51, 0.06);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    h2 {
-      font-size: 2rem;
-      line-height: 1.2;
-      color: var(--accent);
-      margin-bottom: 14px;
-      font-weight: 500;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-      color: var(--ink);
-    }
-
-    p + p {
-      margin-top: 14px;
-    }
-
-    ul {
-      margin-top: 14px;
-      padding-left: 22px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .quote {
-      font-size: 1.35rem;
-      line-height: 1.55;
-      color: var(--accent);
-      border-left: 4px solid var(--gold);
-      padding-left: 20px;
-      margin-top: 18px;
-    }
-
-    .muted {
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
     .notice {
-      background: var(--accent-soft);
-      border-left: 5px solid var(--accent);
-      padding: 18px 20px;
-      border-radius: 16px;
-      margin-top: 18px;
-      font-family: Arial, sans-serif;
-      font-size: 0.95rem;
+      background: #fff8e1;
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 4px solid #d6a700;
     }
 
-    .meeting-box {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-family: Arial, sans-serif;
-      font-size: 0.96rem;
-      margin-top: 12px;
-    }
-
-    .info-table td {
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-
-    .info-table td:first-child {
-      font-weight: 700;
-      color: var(--accent);
-      width: 38%;
-      padding-right: 12px;
+    .contact-link {
+      margin: 12px 0;
+      font-size: 1.05rem;
     }
 
     footer {
-      background: #1f2933;
-      color: white;
-      padding: 34px 20px;
       text-align: center;
-      font-family: Arial, sans-serif;
-      font-size: 0.9rem;
+      margin-top: 40px;
+      color: #666666;
+      font-size: 14px;
+      padding-bottom: 20px;
     }
 
-    footer p {
-      max-width: 850px;
-      margin: 0 auto;
-      opacity: 0.85;
-    }
-
-    @media (max-width: 800px) {
-      .grid,
-      .meeting-box {
-        grid-template-columns: 1fr;
+    @media (max-width: 600px) {
+      body {
+        padding: 16px;
       }
 
-      header {
-        padding-top: 54px;
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .logo {
+        width: 220px;
       }
 
       .card {
-        padding: 24px;
-      }
-
-      nav .nav-inner {
-        gap: 16px;
+        padding: 18px;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="eyebrow">Grupo de recuperación</div>
-    <h1>La Cuarta Dimensión</h1>
-    <p>Un espacio de esperanza, honestidad y ayuda mutua para quienes desean liberarse de la lujuria y vivir una sobriedad sexual día a día.</p>
-    <div class="cta-row">
-      <a class="button primary" href="#contacto">Pedir información</a>
-      <a class="button" href="#reuniones">Ver reuniones</a>
+    <div class="logo-container">
+      <img
+        src="logo.png"
+        alt="La Cuarta Dimensión - Sexólicos Anónimos"
+        class="logo"
+      />
     </div>
+
+    <h1>Sexólicos Anónimos en Satélite — La Cuarta Dimensión</h1>
+    <p class="subtitle">Recuperación de la adicción sexual, la pornografía y la conducta compulsiva.</p>
+    <p class="quote">“Esperanza. Libertad. Nueva forma de vivir.”</p>
   </header>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="#bienvenida">Bienvenida</a>
-      <a href="#programa">El programa</a>
-      <a href="#reuniones">Reuniones</a>
-      <a href="#anonimato">Anonimato</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </nav>
-
   <main>
-    <section id="bienvenida" class="card">
-      <h2>Bienvenido</h2>
-      <p>La Cuarta Dimensión es un grupo de recuperación para personas que reconocen que han perdido el control frente a la lujuria, la pornografía, la fantasía sexual, la masturbación compulsiva u otras conductas sexuales destructivas.</p>
-      <p>No somos profesionales de la salud mental ni damos terapia. Compartimos experiencia, fortaleza y esperanza desde los principios de los Doce Pasos.</p>
-      <div class="quote">“Sólo por hoy, no tenemos que enfrentar esto solos.”</div>
-    </section>
 
-    <section id="programa">
-      <div class="grid">
-        <div class="card">
-          <h3>Honestidad</h3>
-          <p>La recuperación comienza cuando dejamos de escondernos y empezamos a decir la verdad sobre lo que pasa en nuestra mente, nuestras emociones y nuestras conductas.</p>
-        </div>
-        <div class="card">
-          <h3>Rendición</h3>
-          <p>Aprendemos a dejar de luchar solos contra la lujuria y a pedir ayuda: a Dios, a un padrino y a otros miembros en recuperación.</p>
-        </div>
-        <div class="card">
-          <h3>Servicio</h3>
-          <p>Al recibir ayuda, aprendemos también a darla. La recuperación se fortalece cuando llevamos el mensaje a quien todavía sufre.</p>
-        </div>
-      </div>
+    <section class="card highlight">
+      <h2>Bienvenido</h2>
+      <p>
+        La Cuarta Dimensión es un grupo de recuperación en Ciudad Satélite, Naucalpan,
+        para hombres que desean liberarse de la lujuria y alcanzar la sobriedad sexual.
+      </p>
+      <p>
+        Compartimos experiencia, fortaleza y esperanza, siguiendo los principios de los Doce Pasos.
+      </p>
     </section>
 
     <section class="card">
       <h2>¿Para quién es este grupo?</h2>
-      <p>Este grupo puede ser para ti si te identificas con una o más de estas experiencias:</p>
-      <ul>
-        <li>Has intentado parar o limitar conductas sexuales y no has podido.</li>
-        <li>Usas pornografía, fantasía, masturbación o búsqueda sexual para evadir ansiedad, soledad, dolor o estrés.</li>
-        <li>Sientes culpa, vergüenza, remordimiento o miedo después de actuar compulsivamente.</li>
-        <li>Tu vida espiritual, familiar, laboral o emocional se ha visto afectada.</li>
-        <li>Quieres vivir sobrio y estás dispuesto a pedir ayuda.</li>
-      </ul>
+      <p>
+        Este espacio puede ayudarte si has intentado parar o limitar el consumo de pornografía,
+        la masturbación compulsiva, la fantasía sexual, la búsqueda sexual o conductas relacionadas
+        con la lujuria, y no has podido hacerlo solo.
+      </p>
+      <p>
+        No necesitas tener todo claro para pedir información. Basta con el deseo de buscar ayuda.
+      </p>
     </section>
 
-    <section id="reuniones" class="card">
-      <div class="meeting-box">
-        <div>
-          <h2>Reuniones</h2>
-          <p>Las reuniones son espacios confidenciales para compartir experiencia, fortaleza y esperanza. Nadie está obligado a hablar. Puedes asistir, escuchar y decidir si este camino es para ti.</p>
-          <div class="notice">Por seguridad y anonimato, la ubicación exacta se comparte únicamente por contacto directo.</div>
-        </div>
-        <div>
-          <table class="info-table">
-            <tr>
-              <td>Nombre</td>
-              <td>La Cuarta Dimensión</td>
-            </tr>
-            <tr>
-              <td>Zona</td>
-              <td>Satélite / Naucalpan</td>
-            </tr>
-            <tr>
-              <td>Día</td>
-              <td>Lunes, Viernes y Sábados</td>
-            </tr>
-            <tr>
-              <td>Horario</td>
-              <td>Entre Semana a las 7:30pm, los Sábados a las 10:00am</td>
-            </tr>
-            <tr>
-              <td>Formato</td>
-              <td>Presencial / Zoom</td>
-            </tr>
-          </table>
-        </div>
-      </div>
+    <section class="card">
+      <h2>Ubicación</h2>
+      <p>
+        Zona Ciudad Satélite, Naucalpan de Juárez, Estado de México.
+      </p>
+      <p>
+        Por privacidad y anonimato, la ubicación exacta de la reunión se comparte únicamente
+        después del primer contacto.
+      </p>
     </section>
 
-    <section id="anonimato" class="card">
+    <section class="card">
       <h2>Anonimato y confidencialidad</h2>
-      <p>El anonimato protege a todos. Lo que se escucha en una reunión se queda en la reunión. No revelamos quién asiste, qué comparte ni detalles personales de otros miembros.</p>
-      <p>Este sitio evita publicar direcciones, nombres completos, fotografías o información que comprometa la privacidad de quienes buscan ayuda.</p>
+      <p>
+        El anonimato protege a quienes buscan ayuda. Lo que se comparte en una reunión se queda
+        en la reunión. No publicamos nombres completos, fotografías de miembros ni direcciones exactas.
+      </p>
     </section>
 
     <section class="card">
       <h2>Aviso importante</h2>
-      <p>Este sitio es informativo y no sustituye terapia, atención médica, dirección espiritual ni acompañamiento profesional. Si estás en crisis, en riesgo de hacerte daño o de dañar a alguien más, busca ayuda profesional o servicios de emergencia de inmediato.</p>
-      <div class="notice">Este sitio no pretende hablar oficialmente en nombre de Sexólicos Anónimos ni de ninguna oficina central. Para información oficial, consulta los canales oficiales de la fraternidad correspondiente.</div>
-<section id="contacto" class="card">
-  <h2>Contacto</h2>
-  <p>Para pedir información sobre reuniones o hablar con alguien del grupo:</p>
+      <div class="notice">
+        Este sitio es informativo y no pretende hablar oficialmente en nombre de Sexólicos Anónimos
+        ni de ninguna oficina central. Tampoco sustituye terapia, atención médica, dirección espiritual
+        ni acompañamiento profesional. Si estás en crisis o en riesgo de hacerte daño o dañar a alguien más,
+        busca ayuda profesional o servicios de emergencia de inmediato.
+      </div>
+    </section>
 
-  <p>
-    <strong>
-      <a href="tel:+525574197223">
-        📞 Llamar al 55 7419 7223
-      </a>
-    </strong>
-  </p>
+    <section class="card" id="contacto">
+      <h2>Contacto</h2>
+      <p>Para pedir información sobre reuniones o hablar con alguien del grupo:</p>
 
-  <p>
-    <strong>
-      <a href="sms:+525574197223?body=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20SA%20Grupo%20Sat%C3%A9lite">
-        ✉️ Enviar SMS
-      </a>
-    </strong>
-  </p>
+      <p class="contact-link">
+        <a href="tel:+525574197223" target="_blank">
+          📞 Llamar al +52 55 7419 7223
+        </a>
+      </p>
 
-  <p>
-    <strong>
-      <a href="mailto:grupolacuartadimension@gmail.com">
-        grupolacuartadimension@gmail.com
-      </a>
-    </strong>
-  </p>
-</section>
+      <p class="contact-link">
+        <a href="sms:+525574197223?body=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20La%20Cuarta%20Dimensi%C3%B3n" target="_blank">
+          ✉️ Enviar SMS
+        </a>
+      </p>
+
+      <p class="contact-link">
+        <a href="mailto:grupolacuartadimension@gmail.com" target="_blank">
+          grupolacuartadimension@gmail.com
+        </a>
+      </p>
+    </section>
+
   </main>
 
   <footer>
-    <p>© <span id="year"></span> La Cuarta Dimensión. Sitio informativo de recuperación. La sobriedad se vive un día a la vez.</p>
+    La Cuarta Dimensión · Ciudad Satélite · Naucalpan · Estado de México
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
